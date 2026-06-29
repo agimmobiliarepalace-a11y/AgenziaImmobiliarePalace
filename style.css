@@ -265,9 +265,11 @@ img {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 6px;
+    padding: 10px;
     flex-direction: column;
     gap: 5px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle span {
@@ -853,6 +855,22 @@ img {
 @media (max-width: 768px) {
     .chi-siamo__inner {
         grid-template-columns: 1fr;
+    }
+
+    .chi-siamo__photo-placeholder {
+        min-height: 280px;
+        height: 50vw;
+        max-height: 360px;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .chi-siamo__focus-badge {
+        bottom: 12px;
+        right: 12px;
+        max-width: 180px;
+        padding: 10px 14px;
+        font-size: 12px;
     }
 
     .chi-siamo__cards {
@@ -2638,5 +2656,240 @@ body {
 
     .container {
         padding: 0 16px;
+    }
+}
+
+
+/* ============================================================
+   IPHONE / SMALL MOBILE — ≤ 480px
+   ============================================================ */
+@media (max-width: 480px) {
+
+    /* ── Navbar ── */
+    .nav-toggle {
+        padding: 12px;
+    }
+
+    .nav-toggle span {
+        width: 26px;
+        height: 2.5px;
+    }
+
+    .navbar__logo-img {
+        height: 36px;
+    }
+
+    .nav-menu {
+        padding: 100px 20px 40px;
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        padding: 14px 20px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero__content {
+        padding-top: 36px;
+        padding-bottom: 40px;
+    }
+
+    .hero__title {
+        font-size: clamp(36px, 12vw, 52px);
+    }
+
+    .hero__tagline {
+        font-size: 16px;
+    }
+
+    .hero__sub {
+        font-size: 14px;
+    }
+
+    .hero__photo-placeholder {
+        min-height: 240px;
+        border-radius: var(--r-lg) var(--r-lg) 0 0;
+    }
+
+    .hero__focus-card {
+        bottom: 12px;
+        right: 12px;
+        max-width: 160px;
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .hero__badge {
+        bottom: 12px;
+        left: 12px;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    /* ── Chi siamo ── */
+    .chi-siamo {
+        padding: 60px 0;
+    }
+
+    .chi-siamo__photo-placeholder {
+        min-height: 220px;
+        height: 60vw;
+        max-height: 300px;
+    }
+
+    .chi-siamo__title {
+        font-size: clamp(24px, 7vw, 36px);
+    }
+
+    .chi-siamo__desc {
+        font-size: 14px;
+    }
+
+    .chi-card {
+        padding: 16px;
+    }
+
+    .chi-card__title {
+        font-size: 14px;
+    }
+
+    .chi-card__desc {
+        font-size: 12px;
+    }
+
+    /* ── Method timeline → single column ── */
+    .method {
+        padding: 60px 0;
+    }
+
+    .method__step {
+        grid-template-columns: 40px 1fr !important;
+        gap: 0 12px;
+    }
+
+    .method__step--left .method__left,
+    .method__step--right .method__right {
+        order: 2;
+    }
+
+    .method__step--left .method__right,
+    .method__step--right .method__left {
+        order: 3;
+    }
+
+    .method__center {
+        order: 1;
+    }
+
+    .method__step-img {
+        margin-top: 12px;
+    }
+
+    /* ── Services ── */
+    .services {
+        padding: 60px 0;
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service__title {
+        font-size: 16px;
+    }
+
+    .service__desc {
+        font-size: 13px;
+    }
+
+    /* ── Confronto / Compare ── */
+    .compare {
+        padding: 60px 0;
+    }
+
+    .compare__both {
+        flex-direction: column !important;
+    }
+
+    .compare__box {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    .compare__row-text {
+        font-size: 13px;
+    }
+
+    /* ── Reviews ── */
+    .reviews {
+        padding: 60px 0;
+    }
+
+    .review__featured-quote {
+        font-size: 15px;
+    }
+
+    .reviews__grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .review__text {
+        font-size: 13px;
+    }
+
+    /* ── Staff ── */
+    .staff {
+        padding: 60px 0;
+    }
+
+    .staff__grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ── Contact form ── */
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact__grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .form__input {
+        font-size: 16px; /* prevents iOS zoom on focus */
+    }
+
+    /* ── Section headers ── */
+    .section-header {
+        margin-bottom: 36px;
+    }
+
+    .section-title {
+        font-size: clamp(24px, 7vw, 40px);
+    }
+
+    .section-sub {
+        font-size: 14px;
+    }
+
+    /* ── Buttons ── */
+    .btn--lg {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+
+    .btn--cta {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    /* ── Cases / Success stories ── */
+    .case__card--square {
+        min-width: 260px;
     }
 }
