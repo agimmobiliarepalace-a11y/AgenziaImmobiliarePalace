@@ -12,21 +12,32 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* ─── Hamburger menu (mobile) ─── */
+function closeMenu() {
+  navMenu.classList.remove('open');
+  navToggle.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
 navToggle.addEventListener('click', () => {
   const isOpen = navMenu.classList.toggle('open');
   navToggle.classList.toggle('open', isOpen);
   navToggle.setAttribute('aria-expanded', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+  // Do not block scrolling with overflow: hidden so we can detect scrolling to auto-close the menu
 });
 
 navMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    navToggle.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    closeMenu();
   });
 });
+
+// Close mobile navigation menu on scroll
+window.addEventListener('scroll', () => {
+  if (navMenu.classList.contains('open')) {
+    closeMenu();
+  }
+}, { passive: true });
 
 /* ─── Active nav link on scroll ─── */
 const sections = document.querySelectorAll('section[id], div[id]');
