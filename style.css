@@ -292,22 +292,22 @@ img {
     .nav-menu {
         position: fixed;
         inset: 0;
-        background: var(--navy-deep);
-        /* sfondo opaco garantito */
-        background-color: #080e2e;
-        /* fallback solido senza variabile */
+        background: #080e2e !important;
+        background-color: #080e2e !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 20px;
         opacity: 0;
         pointer-events: none;
-        /* Usa sia opacity che transform per animazione fluida */
         transform: translateY(-8px);
         transition: opacity .28s ease, transform .28s ease;
         padding: 80px 24px 40px;
         z-index: 9999;
-        /* sopra hero, immagini, tutto */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.open {
@@ -1046,26 +1046,42 @@ img {
         left: 28px;
     }
 
-    /* Ogni step: cerchio a sinistra (56px) + contenuto a destra */
+    /* Ogni step: singola colonna con padding per il cerchio */
     .method__step {
-        grid-template-columns: 56px 1fr;
-        grid-template-rows: auto;
-        gap: 16px;
-        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+        padding-left: 72px;
+        position: relative;
+        margin-bottom: 48px;
     }
 
-    /* Cerchio numero: sempre colonna 1 */
+    /* Cerchio numero: posizionato assoluto a sinistra */
     .method__step .method__center {
-        grid-column: 1;
-        grid-row: 1;
-        justify-content: flex-start;
-        align-items: flex-start;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    .method__num-circle {
+        width: 56px;
+        height: 56px;
+    }
+
+    /* Titolo e testo sempre visibili */
+    .method__step-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .method__step-desc {
+        font-size: 13px;
     }
 
     /* ── Passi LEFT (step 1, 3): testo in .method__left ── */
     .method__step--left .method__left {
-        grid-column: 2;
-        grid-row: 1;
         text-align: left;
     }
 
@@ -1076,8 +1092,6 @@ img {
 
     /* ── Passi RIGHT (step 2, 4): testo in .method__right ── */
     .method__step--right .method__right {
-        grid-column: 2;
-        grid-row: 1;
         text-align: left;
     }
 
