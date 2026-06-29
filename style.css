@@ -29,7 +29,7 @@
     --green: #22c55e;
 
     --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-    --font-head: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    --font-head: 'Lora', 'Georgia', serif;
 
     --r-sm: 8px;
     --r-md: 16px;
@@ -49,6 +49,21 @@ body {
     background: var(--navy-deep);
     color: var(--white);
     overflow-x: hidden;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1, h2, h3, h4, h5, h6,
+.hero__title,
+.section-title,
+.chi-siamo__title,
+.method__step-title,
+.service__title,
+.case__sq-title,
+.staff__name,
+.hero__tagline,
+.review__featured-quote,
+.review__text {
+    font-family: var(--font-head);
 }
 
 img {
