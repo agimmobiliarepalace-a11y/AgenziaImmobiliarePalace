@@ -49,6 +49,8 @@ body {
     background: var(--navy-deep);
     color: var(--white);
     overflow-x: hidden;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* ---------- TYPOGRAPHY ---------- */
@@ -89,7 +91,7 @@ img {
 }
 
 .section-eyebrow {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: .18em;
     text-transform: uppercase;
@@ -112,7 +114,7 @@ img {
 }
 
 .section-sub {
-    font-size: 16px;
+    font-size: 20px;
     color: var(--gray-600);
     margin-top: 14px;
     line-height: 1.6;
@@ -140,7 +142,7 @@ img {
     color: var(--navy);
     border-radius: 100px;
     padding: 14px 32px;
-    font-size: 15px;
+    font-size: 18px;
     box-shadow: 0 2px 16px rgba(255, 255, 255, .18);
 }
 
@@ -156,7 +158,7 @@ img {
     color: var(--white);
     border-radius: 100px;
     padding: 14px 32px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .btn--navy:hover {
@@ -166,17 +168,23 @@ img {
 
 .btn--lg {
     padding: 16px 40px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .btn--sm {
     padding: 10px 22px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .btn--full {
     width: 100%;
     justify-content: center;
+}
+
+.btn--bold-uppercase {
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 /* ---------- FADE-UP ANIMATIONS ---------- */
@@ -262,7 +270,7 @@ img {
 .nav-link {
     color: rgba(255, 255, 255, .75);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     padding: 8px 14px;
     border-radius: 100px;
@@ -416,15 +424,27 @@ img {
 }
 
 .hero__tagline {
-    font-size: clamp(18px, 2.5vw, 24px);
-    font-style: italic;
-    color: rgba(255, 255, 255, .6);
+    font-size: clamp(22px, 3.5vw, 32px);
+    font-weight: 800;
+    font-style: normal;
+    color: var(--white);
     line-height: 1.4;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
+    animation: gentleZoom 6s ease-in-out infinite alternate;
+    display: inline-block;
+}
+
+@keyframes gentleZoom {
+    0% {
+        transform: scale(0.96);
+    }
+    100% {
+        transform: scale(1.04);
+    }
 }
 
 .hero__sub {
-    font-size: 16px;
+    font-size: 20px;
     color: rgba(255, 255, 255, .6);
     max-width: 540px;
     margin: 0 auto 40px;
@@ -535,7 +555,7 @@ img {
     padding: 14px 18px;
     max-width: 200px;
     border: 1px solid rgba(255, 255, 255, .12);
-    font-size: 13px;
+    font-size: 17px;
     color: rgba(255, 255, 255, .7);
     line-height: 1.4;
 }
@@ -543,7 +563,7 @@ img {
 .hero__focus-card strong {
     display: block;
     color: var(--white);
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 4px;
 }
 
@@ -560,7 +580,7 @@ img {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 600;
     color: var(--white);
 }
@@ -727,7 +747,7 @@ img {
 }
 
 .risultati__label {
-    font-size: 13px;
+    font-size: 17px;
     color: var(--gray-400);
     line-height: 1.5;
     font-weight: 500;
@@ -796,7 +816,7 @@ img {
     border: 1px solid rgba(255, 255, 255, .12);
     border-radius: var(--r-md);
     padding: 14px 18px;
-    font-size: 13px;
+    font-size: 15px;
     color: rgba(255, 255, 255, .75);
     line-height: 1.45;
     max-width: 220px;
@@ -809,7 +829,7 @@ img {
 }
 
 .chi-siamo__eyebrow {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: .18em;
     text-transform: uppercase;
@@ -829,7 +849,7 @@ img {
 }
 
 .chi-siamo__desc {
-    font-size: 16px;
+    font-size: 20px;
     color: rgba(255, 255, 255, .65);
     line-height: 1.7;
     margin-bottom: 36px;
@@ -859,14 +879,14 @@ img {
 }
 
 .chi-card__title {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 6px;
 }
 
 .chi-card__desc {
-    font-size: 13px;
+    font-size: 17px;
     color: rgba(255, 255, 255, .55);
     line-height: 1.55;
 }
@@ -991,7 +1011,7 @@ img {
 }
 
 .method__step-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
     color: var(--navy);
     text-transform: uppercase;
@@ -1001,7 +1021,7 @@ img {
 }
 
 .method__step-desc {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--gray-600);
     line-height: 1.65;
 }
@@ -1091,12 +1111,12 @@ img {
 
     /* Titolo e testo sempre visibili */
     .method__step-title {
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 8px;
     }
 
     .method__step-desc {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     /* ── Passi LEFT (step 1, 3): testo in .method__left ── */
@@ -1147,8 +1167,11 @@ img {
 .service__card {
     background: var(--gray-100);
     border-radius: var(--r-lg);
-    padding: 32px;
+    padding: 0;
+    overflow: hidden;
     border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
     transition: transform .32s cubic-bezier(.34, 1.56, .64, 1),
         box-shadow .32s ease,
         border-color .32s ease,
@@ -1164,28 +1187,38 @@ img {
     position: relative;
 }
 
-.service__icon-wrap {
-    font-size: 28px;
-    margin-bottom: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    background: var(--white);
-    border-radius: var(--r-sm);
-    box-shadow: var(--shadow-card);
+.service__banner {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service__banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.service__card:hover .service__banner img {
+    transform: scale(1.08);
+}
+
+.service__card-content {
+    padding: 24px 32px 32px;
 }
 
 .service__title {
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 10px;
 }
 
 .service__desc {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--gray-600);
     line-height: 1.65;
 }
@@ -1555,7 +1588,7 @@ img {
 }
 
 .review__featured-quote {
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(18px, 2.5vw, 22px);
     font-weight: 500;
     color: var(--white);
     line-height: 1.65;
@@ -1643,7 +1676,7 @@ img {
 }
 
 .review__text {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-dark);
     line-height: 1.65;
     margin-bottom: 20px;
@@ -1665,7 +1698,7 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     flex-shrink: 0;
 }
@@ -1673,17 +1706,17 @@ img {
 .review__avatar--lg {
     width: 48px;
     height: 48px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .review__name {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--navy);
 }
 
 .review__loc {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--gray-600);
     margin-top: 1px;
 }
