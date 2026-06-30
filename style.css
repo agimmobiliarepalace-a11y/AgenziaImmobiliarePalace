@@ -849,7 +849,7 @@ img {
 }
 
 .chi-siamo__desc {
-    font-size: 20px;
+    font-size: 22px;
     color: rgba(255, 255, 255, .65);
     line-height: 1.7;
     margin-bottom: 36px;
@@ -887,7 +887,7 @@ img {
 }
 
 .chi-card__desc {
-    font-size: 19px;
+    font-size: 20px;
     color: rgba(255, 255, 255, .65);
     line-height: 1.55;
 }
@@ -1157,6 +1157,7 @@ img {
 
 .services .section-sub {
     color: var(--gray-600);
+    font-size: 22px;
 }
 
 .services__grid {
@@ -1212,14 +1213,15 @@ img {
 }
 
 .service__title {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .service__desc {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--gray-600);
     line-height: 1.65;
 }
@@ -2820,7 +2822,7 @@ body {
     }
 
     .chi-siamo__desc {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .chi-card {
@@ -2832,7 +2834,7 @@ body {
     }
 
     .chi-card__desc {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     /* ── Method timeline → single column ── */
@@ -2868,16 +2870,21 @@ body {
         padding: 60px 0;
     }
 
+    .services .section-sub {
+        font-size: 16px;
+    }
+
     .services__grid {
         grid-template-columns: 1fr !important;
     }
 
     .service__title {
         font-size: 16px;
+        text-transform: uppercase;
     }
 
     .service__desc {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     /* ── Confronto / Compare ── */
